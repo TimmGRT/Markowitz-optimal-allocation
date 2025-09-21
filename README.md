@@ -17,6 +17,5 @@ It helps investors construct an optimal portfolio by balancing **expected return
 ## ⚙️ Features
 - Calculate **expected returns** and **covariance matrix** from financial data.
 - Construct the **efficient frontier**.
-- Find the **global minimum variance portfolio (GMVP)**.
-- Identify the **tangency portfolio** with risk-free asset (Sharpe-optimal).
+- Find the **global minimum variance portfolio** with optimla sharpe.
 - Visualize results with clear plots.
