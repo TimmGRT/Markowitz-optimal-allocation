@@ -1,21 +1,20 @@
-# Markowitz Portfolio Optimization
+# Markowitz Mean–Variance Optimisation
 
-This project implements the **Markowitz Mean-Variance Portfolio Theory**, which is a fundamental model in modern portfolio optimization.  
-It helps investors construct an optimal portfolio by balancing **expected return** against **risk (variance/standard deviation)**.
+Implementation of Markowitz (1952) mean–variance portfolio selection. It covers:
 
----
+- estimation of the expected-return vector $\mu$ and covariance matrix $\Sigma$ from historical returns;
+- the **efficient frontier**, obtained by solving $\min_w \; w^\top \Sigma w$ subject to $w^\top \mu = \mu_p$ and $w^\top \mathbf 1 = 1$;
+- the optimal portfolio for each target return, with its volatility.
 
-## 📂 Project Structure
-- `data/` – Input datasets (e.g., stock returns, asset prices).
-- `notebooks/` – Jupyter/Colab notebooks for experimentation.
-- `src/` – Core implementation files (optimization, visualization, utility functions).
-- `results/` – Generated plots, efficient frontiers, and outputs.
-- `README.md` – Project documentation.
+Short positions are allowed: the weights are not constrained to $w_i \ge 0$.
 
----
+## Contents
 
-## ⚙️ Features
-- Calculate **expected returns** and **covariance matrix** from financial data.
-- Construct the **efficient frontier**.
-- return all optimal portfolio given their expected return and variance.
-- Visualize results with clear plots.
+| File | Description |
+|---|---|
+| `2. Markowitz et tel data.ipynb` | Estimation, efficient frontier and plots |
+| `DEMO delta markowitz.pdf` | Write-up of the derivation and results |
+
+## Assumptions
+
+Single-period horizon; investors are rational, risk-averse and only care about mean and variance; all investors share the same information.
